@@ -4,13 +4,19 @@
             <img src="{{ asset('images/dc-logo.png') }}" alt="DC Comics">
         </a>
         
-        <nav class="d-flex align-items-center">
+        <nav>
             <ul class="d-flex align-items-center m-0">
                 <li class="list-inline-item">
-                    <a href="{{ route('home') }}">COMICS</a>
+                    <a href="{{ route('home') }}"
+                        @if (Request::route()->getName() === 'home') class="active" @endif>
+                        COMICS
+                    </a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="{{ route('news') }}">NEWS</a>
+                    <a href="{{ route('news') }}"
+                        @if (Request::route()->getName() === 'news') class="active" @endif>
+                        NEWS
+                    </a>
                 </li>
             </ul>
         </nav>
