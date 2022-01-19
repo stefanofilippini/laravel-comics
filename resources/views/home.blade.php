@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Comics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 </head>
 <body>
     @include('partials.header')
@@ -31,18 +33,8 @@
         @else
             <h3>NON CI SONO GENERI</h3>
         @endif
-
-        @forelse ($genres as $genre)
-            <h3>I NOSTRI GENERI</h3>
-            <ul>
-                <li>{{ $genre }}</li>
-            </ul>
-        @empty
-            <h3>NON CI SONO GENERI</h3>
-        @endforelse
-
     </main>
 
-    
+    @include('partials.footer')
 </body>
 </html>

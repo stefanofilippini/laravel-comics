@@ -18,4 +18,10 @@ Route::get('/', function () {
         'user' => 'Stefano',
         'genres' => ['genere1', 'genere2', 'genere3']
     ]);
-});
+})->name('home');
+
+Route::get('/news', function () {
+    return view('news', [
+
+    ]);
+})->name('news');
