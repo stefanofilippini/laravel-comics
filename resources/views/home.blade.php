@@ -1,25 +1,18 @@
 @extends('layouts.main')
 
 @section('main-content')
-    <h1>
-                HOMEPAGE
-    </h1>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis explicabo corporis delectus. Doloremque illo molestias magni dignissimos quia, ab eos iure autem laboriosam qui dolores consequatur! Veritatis quos necessitatibus praesentium.
-    </p>
-
-    <h2>
-        Welcome {{ $user }}
-    </h2>
-
-    @if (! empty($genres))
-        <h3>I NOSTRI GENERI</h3>
-        <ul>
-            @foreach ($genres as $genre)
-                <li>{{ $genre }}</li>
+<div class="dark-bg-1">
+    <div class="container d-flex f-dir-column">
+        <div class="cards d-flex f-wrap space-between align-items-center">
+            @foreach ($cards as $card)
+                <div class="card">
+                    <img src="{{ $card['thumb'] }}" alt="{{ $card['title'] }}">
+                    <h4>{{ $card['series'] }}</h4>
+                </div>
             @endforeach
-        </ul>
-    @else
-        <h3>NON CI SONO GENERI</h3>
-    @endif
+        </div>
+        <a class="btn" href="/">LOAD MORE</a>
+    </div>
+</div>
+
 @endsection
