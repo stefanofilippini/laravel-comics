@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('head-title', 'Comics | DC Comics')
+
 @section('main-content')
 <div class="dark-bg-1">
     <div class="container d-flex f-dir-column">
